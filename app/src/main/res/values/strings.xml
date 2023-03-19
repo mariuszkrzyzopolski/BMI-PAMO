@@ -1,9 +1,13 @@
 <resources>
-   <string name="app_name">BMI</string>
+    <string name="app_name">BMI</string>
     <string name="weight">waga</string>
-   <string name="height">wzrost</string>
+    <string name="height">wzrost</string>
     <string name="result">Wynik BMI</string>
     <string name="initial_weight">Twoja waga</string>
     <string name="initial_height">Twój wzrost</string>
     <string name="calculate">Oblicz</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
