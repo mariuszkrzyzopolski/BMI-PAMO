@@ -1,16 +1,15 @@
-package com.example.tipper.ui.dashboard;
+package com.example.tipper.ui.main;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
-
+public class MainViemModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public MainViemModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Result");
+        mText.setValue("This is second page");
     }
 
     public LiveData<String> getText() {

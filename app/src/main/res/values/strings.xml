@@ -7,7 +7,13 @@
     <string name="initial_height">Twój wzrost</string>
     <string name="calculate">Oblicz</string>
     <string name="title_activity_navigation">Navigation</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_bmi">BMI</string>
+    <string name="title_calories">Calories</string>
+    <string name="title_recipes">Recipes</string>
+    <string name="start">Start</string>
+    <string name="podaj_plec">Podaj płeć (m lub w)</string>
+    <string name="podaj_wage">Podaj wagę</string>
+    <string name="podaj_wzrost">Podaj wzrost</string>
+    <string name="podaj_wiek">Podaj wiek</string>
+    <string name="oblicz">Oblicz</string>
 </resources>

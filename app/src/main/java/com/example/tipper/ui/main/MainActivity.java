@@ -1,18 +1,28 @@
-package com.example.tipper;
+package com.example.tipper.ui.main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.tipper.R;
+
 import java.text.NumberFormat;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.tipper.databinding.FragmentMainBinding;
+
+public class MainActivity extends Fragment {
     private static final NumberFormat numberFormat =
             NumberFormat.getNumberInstance();
     private double weight = 0; // weight entered by the user
@@ -20,25 +30,33 @@ public class MainActivity extends AppCompatActivity {
     private TextView weightTextView; // shows formatted weight
     private TextView heightTextView; // shows formatted weight
     private TextView resultTextView; // shows calculated BMI
+    private Button calculateButton;
+
+    private FragmentMainBinding binding;
 
     // called when the activity is first created
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); // call superclass onCreate
-        setContentView(R.layout.activity_main); // inflate the GUI
-        weightTextView = findViewById(R.id.weightTextView);
-        heightTextView = findViewById(R.id.heightTextView);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        MainViemModel mainViewModel =
+                new ViewModelProvider(this).get(MainViemModel.class);
 
-        resultTextView = findViewById(R.id.resultTextView);
+        binding = FragmentMainBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
 
-        Button calculateButton = findViewById(R.id.btn);
+        // get references to programmatically manipulated TextViews
+        weightTextView = binding.weightTextView;
+        heightTextView = binding.heightTextView;
+        resultTextView = binding.resultTextView;
+        calculateButton = binding.btn;
         calculateButton.setOnClickListener(calculateOnClick);
 
-        EditText weightEditText = findViewById(R.id.weightEditText);
+        EditText weightEditText = binding.weightEditText;
         weightEditText.addTextChangedListener(weightEditTextWatcher);
 
-        EditText heightEditText = findViewById(R.id.heightEditText);
+        EditText heightEditText = binding.heightEditText;
         heightEditText.addTextChangedListener(heightEditTextWatcher);
+
+        return root;
     }
 
     // listener object for the EditText's text-changed events

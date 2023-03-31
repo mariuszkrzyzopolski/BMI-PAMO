@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_start">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_start"
         android:name="com.example.tipper.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/start"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_bmi"
+        android:name="com.example.tipper.ui.main.MainActivity"
+        android:label="@string/title_bmi"
+        tools:layout="@layout/fragment_main" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.tipper.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_calories"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.tipper.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_recipes"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
