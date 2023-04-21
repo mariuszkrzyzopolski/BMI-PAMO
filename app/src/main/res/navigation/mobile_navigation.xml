@@ -9,13 +9,21 @@
         android:id="@+id/navigation_start"
         android:name="com.example.tipper.ui.home.HomeFragment"
         android:label="@string/start"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_start_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_bmi"
         android:name="com.example.tipper.ui.main.MainActivity"
         android:label="@string/title_bmi"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_navigation_bmi_to_chartFragment2"
+            app:destination="@id/chartFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -28,4 +36,14 @@
         android:name="com.example.tipper.ui.notifications.NotificationsFragment"
         android:label="@string/title_recipes"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.tipper.ui.chart.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.tipper.ui.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 </navigation>

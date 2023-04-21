@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,6 +24,7 @@ import com.example.tipper.R;
 import java.text.NumberFormat;
 
 import com.example.tipper.databinding.FragmentMainBinding;
+import com.example.tipper.ui.chart.ChartFragment;
 
 public class MainActivity extends Fragment {
     private static final NumberFormat numberFormat =
@@ -31,6 +35,8 @@ public class MainActivity extends Fragment {
     private TextView heightTextView; // shows formatted weight
     private TextView resultTextView; // shows calculated BMI
     private Button calculateButton;
+
+    private Button chartButton;
 
     private FragmentMainBinding binding;
 
@@ -49,6 +55,9 @@ public class MainActivity extends Fragment {
         resultTextView = binding.resultTextView;
         calculateButton = binding.btn;
         calculateButton.setOnClickListener(calculateOnClick);
+        chartButton = binding.wykresy;
+        chartButton.setOnClickListener(chartOnClick);
+
 
         EditText weightEditText = binding.weightEditText;
         weightEditText.addTextChangedListener(weightEditTextWatcher);
@@ -112,6 +121,15 @@ public class MainActivity extends Fragment {
         public void onClick(View v) {
             double BMI = (weight) / (Math.pow(height/100, 2));
             resultTextView.setText(String.format("%.2f",BMI));
+        }
+    };
+
+    private final View.OnClickListener chartOnClick = new View.OnClickListener() {
+        @SuppressLint("DefaultLocale")
+        @Override
+        public void onClick(View v) {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_activity_navigation);
+            navController.navigate(R.id.action_navigation_bmi_to_chartFragment2);
         }
     };
 }

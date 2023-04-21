@@ -16,4 +16,17 @@
     <string name="podaj_wzrost">Podaj wzrost</string>
     <string name="podaj_wiek">Podaj wiek</string>
     <string name="oblicz">Oblicz</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wykresy">Wykresy</string>
+    <string name="quiz">Quiz</string>
+    <string name="correct"><b>Poprawność</b> \n
+                           <b>%1$d</b> na 6, brawo!</string>
+    <string name="a">Zdrowe jedzenie nie pozostaje świeże zbyt długo</string>
+    <string name="b">Jabłka są bardziej skuteczne niż kawa przy pobudzaniu się rano</string>
+    <string name="c">Banany dojrzewające są dla Ciebie lepsze niż Banany z zieloną końcówką</string>
+    <string name="d">Awokado ma dwa razy więcej potasu niż banany</string>
+    <string name="e">Pomarańcze zawierają dwukrotnie większą ilość witaminy C niż Brokuł</string>
+    <string name="f">Świeże warzywa są bardziej pożywne niż nie mrożone warzywa</string>
+    <string name="correct_answer" />
+    <string name="wrong_answer" />
 </resources>

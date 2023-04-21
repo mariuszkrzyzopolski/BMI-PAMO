@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    tools:context=".ui.quiz.QuizFragment">
+
+    <TextView
+        android:id="@+id/answer_text_view"
+        android:layout_width="328dp"
+        android:layout_height="325dp"
+        android:padding="10dp"
+        android:text="@string/a"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--TrueButton-->
+        <Button
+            android:id="@+id/true_button"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#5BD91B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Prawda" />
+
+        <!--FalseButton-->
+        <Button
+            android:id="@+id/false_button"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#E33328"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Fałsz" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:text="next" />
+
+
+</LinearLayout>
